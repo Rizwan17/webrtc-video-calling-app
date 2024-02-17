@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Calling App</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/socket.io.js" defer></script>
+    <script src="/js/main.js" defer></script>
+</head>
+<body>
+
+    <main class="main-container">
+        <aside class="caller-list-wrapper">
+            <h1 class="caller-list-heading h-font">Contacts</h1>
+            <ul id="allusers" class="caller-list">
+                <!-- <li>
+                    <span>Rizwan Khan (You)</span>
+                    <button class="call-btn"><img width="20" src="/images/phone.png" alt=""></button>
+                </li> -->
+            </ul>
+        </aside>
+        <section class="video-call-container">
+            <div class="username-input">
+                <input id="username" type="text" placeholder="Enter Username"><button id="create-user">Create</button>
+            </div>
+            <div class="video-streams">
+                
+                <div class="local-video">
+                    <video id="localVideo" autoplay muted playsinline></video>
+                </div>
+                <div class="remote-video">
+                    <video id="remoteVideo" autoplay muted playsinline></video>
+                </div>
+            </div>
+            <div>
+                <button id="end-call-btn" class="call call-disconnect d-none">
+                    <img src="/images/phone-disconnect.png" alt="">
+                </button>
+            </div>
+        </section>
+    </main>
+    
+
+</body>
+</html>
